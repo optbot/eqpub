@@ -2,7 +2,7 @@
   "name": "@optbot/eqpub",
   "version": "0.0.0",
   "description": "publish active equities to a queue",
-  "main": "lib/start.js",
+  "main": "lib/norequire.js",
   "scripts": {
     "start": "node lib/start.js",
     "setup": "node lib/setup.js",
