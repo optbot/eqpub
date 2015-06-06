@@ -4,8 +4,9 @@
   "description": "publish active equities to a queue",
   "main": "lib/norequire.js",
   "scripts": {
-    "start": "node lib/start.js",
     "setup": "node lib/setup.js",
+    "start": "node lib/daemon.js --action start",
+    "stop": "node lib/daemon.js --action stop",
     "test": "./node_modules/.bin/mocha"
   },
   "private": true,
@@ -30,7 +31,9 @@
     "port": "666"
   },
   "dependencies": {
-    "@optbot/daemon-setup": "git://github.com/optbot/daemon-setup.git#marshall"
+    "@optbot/daemon-setup": "git://github.com/optbot/daemon-setup.git#marshall",
+    "@optbot/py-daemon": "git://github.com/optbot/py-daemon.git#marshall",
+    "yargs": "~3.10.0"
   },
   "devDependencies": {
     "chai": "~2.2.0",
