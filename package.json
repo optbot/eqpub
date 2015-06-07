@@ -27,8 +27,10 @@
     "lib/"
   ],
   "config": {
-    "host": "localhost",
-    "port": "666"
+    "user": "eqpub",
+    "service": "eqpub.py",
+    "command": "/usr/bin/python",
+    "serviceDir": "src"
   },
   "dependencies": {
     "@optbot/daemon-setup": "git://github.com/optbot/daemon-setup.git#marshall",
