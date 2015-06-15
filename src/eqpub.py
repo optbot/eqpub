@@ -19,14 +19,15 @@ class EqPub(object):
         _config = ConfigParser.SafeConfigParser()
         _config.read(constants.CONFIGFILE)
         self._setup_logging(_config)
-        signal.signal(signal.SIGTERM, self._stop_handler)
+        signal.signal(signal.SIGTERM, self.stop)
 
     def start(self):
         self.logger.info('starting')
         signal.pause()
 
-    def _stop_handler(self):
+    def stop(self, sig, frame):
         self.logger.info('stopping')
+        logging.shutdown()
         sys.exit(0)
 
     def _setup_logging(self, config):
