@@ -33,7 +33,7 @@
     "serviceDir": "src"
   },
   "dependencies": {
-    "@optbot/daemon-setup": "git://github.com/optbot/daemon-setup.git#marshall",
+    "@optbot/daemon-setup": "git://github.com/optbot/daemon-setup.git",
     "@optbot/py-daemon": "git://github.com/optbot/py-daemon.git#marshall",
     "yargs": "~3.10.0"
   },
